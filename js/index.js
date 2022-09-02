@@ -1,6 +1,12 @@
 
-let producto = prompt("Que producto busca? (reja, porton, escalera)")
+let producto = prompt("Que producto busca? (reja, porton, escalera) (Para salir use ESC)")
 let precio = ""
+let IVA = 1.21
+let seguir = true
+ 
+
+ while(producto != "ESC"){
+
 
 if (producto === "reja"){
     precio = 15000
@@ -17,10 +23,12 @@ else if(producto === "escalera"){
 else{
     console.warn("No hay stock del producto ingresado.")
 }
-let IVA = 1.21
+
 function precioConIva(){
     console.log("El precio final es de:", precio * IVA)
 }
 
+precioConIva()
 
-
+producto = prompt("Que producto busca? (reja, porton, escalera) (Para salir use ESC)")
+} 
