@@ -1,18 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="es">
+<head> 
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Productos - Coderhouse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
     <link rel="stylesheet" href="estilos.css">
+    <script src="js/variables.js"></script>
+    <script src="js/claseConstructora.js"></script>
     <script src="js/index.js"></script>
-    <title>Proyecto Final</title>
+    <script defer src="js/dom.js"></script>
+
 </head>
 <body>
-    <h1>Primera pre-entrega del Proyecto Final</h1>
-    <h2>Elegir un producto: reja, porton, escalera, parrilla o escalera</h2>
-    <h3>Para salir use ESC</h3>
-    <p>Jesús Mosconi</p>
-    
+    <article>
+        <h1 id="titulo">Herreria L&J</h1>
+        <p id="parrafo">Productos disponibles:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>NOMBRE</th>
+                    <th>IMPORTE</th>
+                    <th>PRECIO CON IVA</th>
+                    <th>STOCK</th>
+                </tr>
+            </thead>
+            <tbody id="tabla">                
+            </tbody>
+        </table>
+            <button >LISTAR PRODUCTOS</button>
+            <button>AGREGAR PRODUCTO</button>
+    </article>
 </body>
 </html>

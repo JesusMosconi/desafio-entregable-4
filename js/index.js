@@ -1,31 +1,14 @@
-//debugger
-let IVA = 1.21
-//Clase constructora
-class Producto {
-    constructor(nombre, precio, stock) {
-        this.nombre = nombre
-        this.precio = precio
-        this.stock = stock
-    }
-    precioConIva() {
-        this.precio = this.precio * IVA
-    }
+
+function generadorProductos(){
+    productos.push(new Producto("reja", "15000", true))
+    productos.push(new Producto("porton", "50000", true))
+    productos.push(new Producto("escalera", "35000", false))
+    productos.push(new Producto("parrila", "5000", true))
+    productos.push(new Producto("pergola", "30000", false))
 
 }
+generadorProductos()
 
-const productos = []
-
-let producto1 = new Producto("reja", "15000", true)
-let producto2 = new Producto("porton", "50000", true)
-let producto3 = new Producto("escalera", "35000", false)
-let producto4 = new Producto("parrila", "5000", true)
-let producto5 = new Producto("pergola", "30000", false)
-
-productos.push(producto1)
-productos.push(producto2)
-productos.push(producto3)
-productos.push(producto4)
-productos.push(producto5)
 
 for (Producto of productos) {
     Producto.precioConIva()
@@ -89,3 +72,7 @@ while (elegirProducto != "ESC") {
     buscarProducto()
     elegirProducto = prompt("Desea comprar otro producto? (Para salir use ESC)")
 }
+
+
+
+   
