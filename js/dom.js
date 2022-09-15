@@ -15,11 +15,17 @@ function agregarProducto(){
     productos.forEach(producto => {
         agregar = `<tr>
                     <td>${producto.nombre}</td>
-                    <td>${producto.precio}</td>
-                    <td>${producto.precioConIva()}</td>
+                    <td>$${producto.precio}</td>
+                    <td>$${producto.precioConIva()}</td>
                     <td>${producto.stock}</td>
                 </tr>`
                 tabla.innerHTML += agregar
     })
 } 
 agregarProducto()
+
+const btnAgregar = document.querySelector("#btnAgregar")
+btnAgregar.addEventListener("click", ()=> alert("Agregaste un producto al carrito"))
+
+const btnBorrar = document.querySelector("#btnBorrar")
+btnBorrar.addEventListener("dblclick", ()=> alert("Has borrado los productos"))

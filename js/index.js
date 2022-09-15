@@ -16,7 +16,7 @@ for (Producto of productos) {
 }
 
 
-//metodo filter para filtrar productos
+/* //metodo filter para filtrar productos
 function filtrarProducto() {
     let nombreProd = prompt("Ingrese el nombre del producto que desea filtrar:").toLowerCase()
     let resultado = productos.filter((producto) => producto.nombre.includes(nombreProd))
@@ -71,7 +71,7 @@ while (elegirProducto != "ESC") {
     filtrarProducto()
     buscarProducto()
     elegirProducto = prompt("Desea comprar otro producto? (Para salir use ESC)")
-}
+} */
 
 
 
