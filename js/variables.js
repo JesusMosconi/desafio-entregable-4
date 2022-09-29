@@ -1,3 +1,6 @@
 let IVA = 1.21
-const productos = []
 let carrito = []
+const productos = []
+
+
+//const nombres = ["jesus" ," martina", "vittorio", "raul"]

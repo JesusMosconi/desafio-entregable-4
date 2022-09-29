@@ -12,9 +12,13 @@ generadorProductos()
 
 for (Producto of productos) {
     Producto.precioConIva()
-    console.log(Producto)
 }
 
+console.log(...productos)
+
+const [a, b] = productos
+console.log(a)
+console.log(b)
 
 
 

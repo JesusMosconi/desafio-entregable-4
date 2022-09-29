@@ -28,9 +28,8 @@ agregarProducto(productos)
 
 
 
-
-//APARTE PRUEBAS
- debugger
+//Eventos
+// debugger
 function eventoEnBotones() {
     productos.forEach(prod =>{
         const btn = document.querySelector(`#btn${prod.id}`)
@@ -46,9 +45,7 @@ function agregarAlCarrito(id) {
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 function recuperarCarrito() {
-    if (localStorage.getItem("carrito")) {
-        carrito = JSON.parse(localStorage.getItem("carrito"))
-    }
+    localStorage.getItem("carrito") &&  (carrito = JSON.parse(localStorage.getItem("carrito")))
 }
 recuperarCarrito()
 
