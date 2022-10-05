@@ -9,7 +9,7 @@ function crearElemento() {
 crearElemento()
 
 
-function agregarProducto(array){
+function agregarProducto(array) {
     let agregar = ""
     tabla.innerHTML = ""
     array.forEach(producto => {
@@ -21,9 +21,9 @@ function agregarProducto(array){
                     <td>${producto.stock}</td>
                     <td><button id="btn${producto.id}">+</button></td>
                 </tr>`
-                tabla.innerHTML += agregar
+        tabla.innerHTML += agregar
     })
-} 
+}
 agregarProducto(productos)
 
 
@@ -31,10 +31,11 @@ agregarProducto(productos)
 //Eventos
 // debugger
 function eventoEnBotones() {
-    productos.forEach(prod =>{
+    productos.forEach(prod => {
         const btn = document.querySelector(`#btn${prod.id}`)
-        btn.addEventListener("click", ()=> agregarAlCarrito(`${prod.id}`))
-    }) 
+        btn.addEventListener("click", () => agregarAlCarrito(`${prod.id}`))
+        btn.addEventListener("click", () => alertaSwAl())
+    })
 }
 eventoEnBotones()
 
@@ -45,7 +46,19 @@ function agregarAlCarrito(id) {
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 function recuperarCarrito() {
-    localStorage.getItem("carrito") &&  (carrito = JSON.parse(localStorage.getItem("carrito")))
+    localStorage.getItem("carrito") && (carrito = JSON.parse(localStorage.getItem("carrito")))
 }
 recuperarCarrito()
 
+
+//SweetAlert
+
+function alertaSwAl() {
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Tu producto ha sido agregado!',
+        showConfirmButton: false,
+        timer: 1500
+      })
+}

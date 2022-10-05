@@ -14,11 +14,6 @@ for (Producto of productos) {
     Producto.precioConIva()
 }
 
-console.log(...productos)
-
-const [a, b] = productos
-console.log(a)
-console.log(b)
 
 
 
