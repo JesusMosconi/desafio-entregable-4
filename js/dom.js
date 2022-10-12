@@ -1,5 +1,5 @@
 const parrafo = document.createElement("p")
-const tabla = document.getElementById("tabla")
+//const tabla = document.getElementById("tabla")
 
 function crearElemento() {
     parrafo.innerText = "Gracias por elegir nuestros productos!"
@@ -7,24 +7,6 @@ function crearElemento() {
     document.body.append(parrafo)
 }
 crearElemento()
-
-
-function agregarProducto(array) {
-    let agregar = ""
-    tabla.innerHTML = ""
-    array.forEach(producto => {
-        agregar = `<tr>
-                    <td>${producto.id}</td>
-                    <td>${producto.nombre}</td>
-                    <td>$${producto.precio}</td>
-                    <td>$${producto.precioConIva()}</td>
-                    <td>${producto.stock}</td>
-                    <td><button id="btn${producto.id}">+</button></td>
-                </tr>`
-        tabla.innerHTML += agregar
-    })
-}
-agregarProducto(productos)
 
 
 

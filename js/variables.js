@@ -3,4 +3,3 @@ let carrito = []
 const productos = []
 
 
-//const nombres = ["jesus" ," martina", "vittorio", "raul"]
